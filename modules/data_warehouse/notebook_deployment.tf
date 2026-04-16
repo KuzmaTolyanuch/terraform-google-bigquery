@@ -210,6 +210,6 @@ resource "google_cloudfunctions2_function" "notebook_deploy_function" {
 
 ## Wait for Function deployment to complete
 resource "time_sleep" "wait_after_function" {
-  create_duration = "5s"
+  create_duration = "15s"
   depends_on      = [google_cloudfunctions2_function.notebook_deploy_function]
 }
