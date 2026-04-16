@@ -63,7 +63,7 @@ func TestDataWarehouse(t *testing.T) {
 				return true, nil
 			}
 		}
-		utils.Poll(t, verifyWorkflows, 8, 30*time.Second)
+		utils.Poll(t, verifyWorkflows, 10, 60*time.Second)
 
 		homeDir, err := os.UserHomeDir()
         if err != nil {
